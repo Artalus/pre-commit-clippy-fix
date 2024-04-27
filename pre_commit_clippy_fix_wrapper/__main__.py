@@ -7,7 +7,7 @@ import sys
 def main() -> int:
     _, *script_args = sys.argv
 
-    cmd = ['cargo', 'clippy', '--fix', '--allow-staged', *script_args]
+    cmd = ['cargo', 'clippy', '--fix', '--allow-staged', '--allow-dirty', *script_args]
     process = subprocess.Popen(cmd, stderr=subprocess.PIPE)
     _, stderr = process.communicate()
     rc = process.wait()
