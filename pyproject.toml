@@ -1,0 +1,15 @@
+[project]
+name = 'pre_commit_clippy_fix_wrapper'
+version = '0.0.0'
+
+[project.scripts]
+pre-commit-clippy-fix-wrapper = 'pre_commit_clippy_fix_wrapper.__main__:main'
+
+[project.optional-dependencies]
+dev = ['mypy', 'pre-commit', 'ruff']
+
+[tool.ruff.format]
+quote-style = 'single'
+
+[tool.mypy]
+strict = true

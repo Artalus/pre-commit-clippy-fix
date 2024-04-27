@@ -1,0 +1,8 @@
+- id: clippy-fix
+  name: clippy fix
+  description: silently run cargo clippy --fix
+  entry: pre-commit-clippy-fix-wrapper
+  language: python
+  types: [rust]
+  pass_filenames: false # clippy cannot check files separately
+  minimum_pre_commit_version: "2.9.2"
